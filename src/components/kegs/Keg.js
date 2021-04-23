@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { Accordion, Card, Button, Row, Col } from 'react-bootstrap';
+import { Accordion, Card, Row, Col, Button } from 'react-bootstrap';
 
 export default function Keg({id, kegInfo, eventKey}) {
   return (
-    <Card id={id}>
-      <Accordion.Toggle as={Card.Header} eventKey={eventKey.toString()}>
-        {kegInfo.name}
-      </Accordion.Toggle>
+    <Card id={id} className="accordion">
+      
+        <Row className="accordion-header">
+          <Col sm={9}>
+            <Accordion.Toggle as={Card.Header} eventKey={eventKey.toString()}>
+              {kegInfo.name}
+            </Accordion.Toggle>
+          </Col>
+          <Col>
+            <span className="font-weight-bold">Remaining Pint(s): </span> {kegInfo.remainingPints}
+            <Button variant="danger" size="sm" className="sell-btn">Sell</Button>
+          </Col>
+        </Row>
+
       <Accordion.Collapse eventKey={eventKey.toString()}>
         <Card.Body>
           <Row>

@@ -8,7 +8,8 @@ export default class KegList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      kegList: kegData
+      kegList: kegData,
+      showKegForm: false
     }
   }
 
