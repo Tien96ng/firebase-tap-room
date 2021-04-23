@@ -13,11 +13,19 @@ export default class KegList extends Component {
     }
   }
 
+  handleSellClick = (index) => {
+    let tempList = this.state.kegList;
+    tempList[index].remainingPints -= 1;
+    this.setState({
+      kegList: tempList
+    })
+    
+  }
+
   render() {
     let renderKegs = arr => arr.map((keg, index) => {
-      return <Keg id={v4()} kegInfo={keg} eventKey={index}/>
+      return <Keg id={v4()} kegInfo={keg} eventKey={index} onClick={() => this.handleSellClick(index)} />
     });
-
 
     return(
       <>
