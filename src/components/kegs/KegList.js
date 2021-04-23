@@ -13,8 +13,8 @@ export default class KegList extends Component {
   }
 
   render() {
-    let renderKegs = arr => arr.map(keg => {
-      return <Keg id={v4()} kegInfo={keg} />
+    let renderKegs = arr => arr.map((keg, index) => {
+      return <Keg id={v4()} kegInfo={keg} eventKey={index}/>
     });
 
 

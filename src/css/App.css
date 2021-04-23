@@ -5,3 +5,7 @@
 .add-btn, .navbar {
   margin:  0 0 1rem 0;
 }
+
+.keg-name {
+  text-align: center;
+}

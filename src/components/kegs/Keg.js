@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Accordion, Card, Button, Row, Col } from 'react-bootstrap';
 
-export default function Keg({id, kegInfo}) {
+export default function Keg({id, kegInfo, eventKey}) {
   return (
     <Card id={id}>
-      <Card.Header>
-        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-          {kegInfo.name}
-        </Accordion.Toggle>
-      </Card.Header>
-      <Accordion.Collapse eventKey="0">
+      <Accordion.Toggle as={Card.Header} eventKey={eventKey.toString()}>
+        {kegInfo.name}
+      </Accordion.Toggle>
+      <Accordion.Collapse eventKey={eventKey.toString()}>
         <Card.Body>
           <Row>
             <Col sm={3}>
@@ -46,6 +44,7 @@ export default function Keg({id, kegInfo}) {
 
 Keg.propTypes = {
   id: PropTypes.string,
-  kegInfo: PropTypes.object
+  kegInfo: PropTypes.object,
+  eventKey: PropTypes.number
 };
 
