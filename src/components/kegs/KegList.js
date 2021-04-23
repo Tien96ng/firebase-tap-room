@@ -10,7 +10,15 @@ export default class KegList extends Component {
     super(props)
     this.state = {
       kegList: kegData,
-      showKegForm: false
+      showKegForm: false,
+      newKeg: {
+        name: "",
+        brand: "",
+        price: 0,
+        alcoholContent: 0,
+        flavor: "",
+        remainingPints: 0
+      }
     }
   }
 
@@ -20,13 +28,33 @@ export default class KegList extends Component {
     this.setState({
       kegList: tempList
     })
-  }
+  };
 
   handleForm = () => {
     this.setState(prevState => ({
       showKegForm: !prevState.showKegForm
     }))
-  }
+  };
+
+  handleChange = (e, field) => {
+    let tempKeg = this.state.newKeg;
+    tempKeg[field] = e.target.value;
+    this.setState({ 
+      newKeg : tempKeg,
+
+    })
+  };
+
+  handleKegSubmission = e => {
+    e.preventDefault();
+    let tempKeg = this.state.newKeg;
+    tempKeg.name = tempKeg.name.toUpperCase();
+
+    this.setState(prevState => ({
+      kegList: prevState.kegList.concat(tempKeg),
+      showKegForm: !prevState.showKegForm
+    }));
+  };
 
   render() {
     let renderKegs = arr => arr.map((keg, index) => {
@@ -39,12 +67,16 @@ export default class KegList extends Component {
         <Row className="justify-content-md-center add-btn"> 
           <Button type="button" variant="outline-success" onClick={() => this.handleForm()}>Add a Keg </Button> 
         </Row>
-        {this.state.showKegForm && <AddKeg />}
+        
         <Row>
           <Col>
-            <Accordion>
-              {renderKegs(this.state.kegList)}
-            </Accordion>
+          {
+            this.state.showKegForm 
+            ? 
+            <AddKeg submit={this.handleKegSubmission} change={this.handleChange} keg={this.state.newKeg} /> 
+            : 
+            <Accordion> {renderKegs(this.state.kegList)} </Accordion>
+          }
           </Col>
         </Row>
       </>
