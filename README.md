@@ -1,3 +1,47 @@
+# <div align="center"> **Tap Room** </div>
+### <div align="center"> A front end app tracker for keg alcokhol storage. </div>
+
+
+### _Contributor(s) and Contact Info_ 
+> Tien Nguyen [GitHub](https://github.com/Tien96ng)
+
+---
+
+## _Technologies Used_ ⚙
+
+* **JavaScript**
+* **JSX**
+* **ReactJs**
+* **React Bootstrap**
+* **NPM**
+
+---
+
+## _Description_ 📃
+{Placeholder}
+
+---
+
+## _Installation Guide_ 💻 
+
+<details>
+<summary>Open for full Guide</summary>
+
+### _Cloning and Initial Setup_
+
+> Repository: 
+1. {}
+
+
+</details>
+
+---
+
+## _Full Guide to Run React App_
+
+<details>
+<summary> Open for full Guide </summary>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +112,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+</details>
+
+---
+
+## _Known Bugs_ 🩹
+*{}
+
+---
+
+## _Future Updates_ 🛠
+* {}
+
+---
+
+## _License_ ⚖️
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2021 Tien Nguyen.
+
+Please contact Contributor for further use information or if you would like to make a contribution.
