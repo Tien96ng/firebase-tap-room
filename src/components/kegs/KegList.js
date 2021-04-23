@@ -19,20 +19,24 @@ export default class KegList extends Component {
     this.setState({
       kegList: tempList
     })
-    
+  }
+
+  handleForm = () => {
+    this.setState(prevState => ({
+      showKegForm: !prevState.showKegForm
+    }))
   }
 
   render() {
     let renderKegs = arr => arr.map((keg, index) => {
-      return <Keg id={v4()} kegInfo={keg} eventKey={index} onClick={() => this.handleSellClick(index)} />
+      return <Keg key={v4()} kegInfo={keg} eventKey={index} onClick={() => this.handleSellClick(index)} />
     });
 
     return(
       <>
-        {console.log(kegData)}
         <Row className="justify-content-md-center"> <h1> Keg List </h1> </Row>
         <Row className="justify-content-md-center add-btn"> 
-          <Button type="button" variant="outline-success">Add a Keg </Button> 
+          <Button type="button" variant="outline-success" onClick={() => this.handleForm()}>Add a Keg </Button> 
         </Row>
         <Row>
           <Col>
