@@ -20,6 +20,20 @@
 ## _Description_ 📃
 {Placeholder}
 
+
+---
+
+## _Planning via Diagram_ 
+
+<details>
+<summary>Open to view the Diagram</summary>
+
+### Modeled via [Draw.io](https://app.diagrams.net/)
+![](public/img/tap-room.png)
+
+</details>
+
+
 ---
 
 ## _Installation Guide_ 💻 
