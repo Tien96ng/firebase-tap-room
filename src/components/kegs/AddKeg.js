@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap';
 export default function AddKeg() {
   return(
     <>
+      <h1> Placeholder </h1>
     </>
   )
 }

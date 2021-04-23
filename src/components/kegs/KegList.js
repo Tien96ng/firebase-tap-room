@@ -3,6 +3,7 @@ import { v4 } from 'uuid';
 import { Accordion, Row, Col, Button } from 'react-bootstrap';
 import kegData from '../../data/kegData';
 import Keg from './Keg';
+import AddKeg from './AddKeg';
 
 export default class KegList extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ export default class KegList extends Component {
         <Row className="justify-content-md-center add-btn"> 
           <Button type="button" variant="outline-success" onClick={() => this.handleForm()}>Add a Keg </Button> 
         </Row>
+        {this.state.showKegForm && <AddKeg />}
         <Row>
           <Col>
             <Accordion>
