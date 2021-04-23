@@ -28,8 +28,8 @@ export default function Keg({id, kegInfo, eventKey, onClick}) {
             </Col>
             <Col sm={3}>
               <p>
-                <span className="font-weight-bold">Price: $</span>
-                {kegInfo.price}
+                <span className="font-weight-bold">Price: </span>
+                ${kegInfo.price}
               </p>
             </Col>
             <Col sm={3}>
