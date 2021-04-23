@@ -1,4 +1,5 @@
 import { Container } from 'react-bootstrap';
+import '../css/App.css';
 
 import React from 'react';
 import Header from './Header';

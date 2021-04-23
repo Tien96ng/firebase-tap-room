@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 export default function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="navbar" bg="dark" variant="dark">
         <Navbar.Brand href="#home">
           <img
             alt="keg icon"
