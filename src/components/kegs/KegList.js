@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 } from 'uuid';
 import { Accordion } from 'react-bootstrap';
 import kegData from '../../data/kegData';
 import Keg from './Keg';
@@ -12,12 +13,17 @@ export default class KegList extends Component {
   }
 
   render() {
+    let renderKegs = arr => arr.map(keg => {
+      return <Keg id={v4()} kegInfo={keg} />
+    });
+
+
     return(
       <>
-        {console.log(kegData)}
+        {console.log(kegData[0])}
         <h1> Keg List </h1>
-        <Accordion defaultActiveKey="0">
-          <Keg />
+        <Accordion>
+          {renderKegs(this.state.kegList)}
         </Accordion>
       </>
     )
