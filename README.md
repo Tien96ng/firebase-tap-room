@@ -35,7 +35,8 @@ A front end webapp that keeps track of Keg usage and storage. This can be a mock
 ![](public/img/tap-room.png)
 
 ### **Finished MVP**
-![](public/img/tap-rom-demo.gif)
+> Note: The MOV to GIF Converter made the gray overlay in the demo.
+![](public/img/tap-room-final.gif)
 
 </details>
 

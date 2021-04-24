@@ -49,8 +49,8 @@ export default class KegList extends Component {
     e.preventDefault();
     let tempKeg = this.state.newKeg;
     tempKeg.name = tempKeg.name.toUpperCase();
-    tempKeg.brand = tempKeg.name.slice(0, 1).toUpperCase() + tempKeg.name.slice(1).toLowerCase();
-    tempKeg.flavor = tempKeg.name.slice(0, 1).toUpperCase() + tempKeg.name.slice(1).toLowerCase();
+    tempKeg.brand = tempKeg.brand.slice(0, 1).toUpperCase() + tempKeg.brand.slice(1).toLowerCase();
+    tempKeg.flavor = tempKeg.flavor.slice(0, 1).toUpperCase() + tempKeg.flavor.slice(1).toLowerCase();
 
     let emptyKeg = {
       name: "",
