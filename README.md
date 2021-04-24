@@ -1,4 +1,4 @@
-# <div align="center"> **Tap Room** </div>
+# <div align="center"> **Tap Room** 🍺  </div>
 ### <div align="center"> A front end app tracker for keg alcokhol storage. </div>
 
 
@@ -24,7 +24,7 @@
 
 ---
 
-## _Planning via Diagram_ 
+## _Planning via Diagram_ 💭
 
 <details>
 <summary>Open to view the Diagram</summary>
@@ -55,7 +55,7 @@
 
 ---
 
-## _Full Guide to Run React App_
+## _Full Guide to Run React App_ 📓 
 
 <details>
 <summary> Open for full Guide </summary>
