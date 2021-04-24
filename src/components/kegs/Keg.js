@@ -15,7 +15,13 @@ export default function Keg({id, kegInfo, eventKey, onClick}) {
         </Col>
         <Col className="ml-auto mr-1 mt-2">
           <span className="font-weight-bold">Remaining Pint(s): </span> {kegInfo.remainingPints}
-          <Button variant="danger" size="sm" className="sell-btn" onClick={onClick} disabled={kegInfo.remainingPints === 0}>Sell</Button>
+          <Button 
+            variant={kegInfo.remainingPints === 0 ? "secondary" : "danger"} 
+            size="sm" className="sell-btn" 
+            onClick={onClick} 
+            disabled={kegInfo.remainingPints === 0}>
+            {kegInfo.remainingPints === 0 ? "Sold Out" : "Sell"}
+          </Button>
         </Col>
       </Row>
 
