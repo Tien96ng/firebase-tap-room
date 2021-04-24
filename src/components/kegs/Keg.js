@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Accordion, Card, Row, Col, Button } from 'react-bootstrap';
 
 export default function Keg({id, kegInfo, eventKey, onClick}) {
+
+
   return (
     <Card id={id} className="accordion">
       <Row className="accordion-header">
@@ -13,7 +15,7 @@ export default function Keg({id, kegInfo, eventKey, onClick}) {
         </Col>
         <Col className="ml-auto mr-1 mt-2">
           <span className="font-weight-bold">Remaining Pint(s): </span> {kegInfo.remainingPints}
-          <Button variant="danger" size="sm" className="sell-btn" onClick={onClick}>Sell</Button>
+          <Button variant="danger" size="sm" className="sell-btn" onClick={onClick} disabled={kegInfo.remainingPints === 0}>Sell</Button>
         </Col>
       </Row>
 
