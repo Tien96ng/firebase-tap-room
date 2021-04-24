@@ -75,9 +75,9 @@ export default class KegList extends Component {
 
     return(
       <>
-        <Row className="justify-content-md-center"> <h1> Keg List </h1> </Row>
+        <Row className="justify-content-md-center"> <h1> {this.state.showKegForm ? "Add a Keg" : "Keg List"} </h1> </Row>
         <Row className="justify-content-md-center add-btn"> 
-          <Button type="button" variant="outline-success" onClick={() => this.handleForm()}>Add a Keg </Button> 
+          <Button type="button" variant={this.state.showKegForm ? "outline-danger" : "outline-success"} onClick={() => this.handleForm()}> {this.state.showKegForm ? "Close Form" : "Add a Keg"} </Button> 
         </Row>
         
         <Row>
