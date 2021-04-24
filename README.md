@@ -14,17 +14,19 @@
 * **ReactJs**
 * **React Bootstrap**
 * **NPM**
+* **ESLint**
+* **Babel**
 * **Draw.io**
 
 ---
 
 ## _Description_ 📃
-{Placeholder}
+A front end webapp that keeps track of Keg usage and storage. This can be a mock utilization for a pub or bar that needs a front end GUI to track their sales. With REACT, state management handles everything for each Keg (Name, brand, dlavor, alcohol content, price, and remaining pints).
 
 
 ---
 
-## _Planning via Diagram_ 💭
+## _Planning via Component Diagram_ 💭
 
 <details>
 <summary>Open to view the Diagram</summary>
@@ -47,8 +49,14 @@
 
 ### _Cloning and Initial Setup_
 
-> Repository: 
-1. 
+> Repository: https://github.com/Tien96ng/tap-room
+1. You will need to use your system's **terminal emulator** to setup and locally use this application.
+2. This project uses npm as a package manager, you can download it [here](https://www.npmjs.com/get-npm).
+3. To clone this directory, navigate in your terminal to the desired location of the project and run command `https://github.com/Tien96ng/tap-room`
+4. Navigate to top level of the directory with command `cd tap-room`
+5. To install dependencies into the project run command `npm install`
+6. To launch this project in a browser, run command `npm start`
+7. To exit live server, press Ctrl+C in your terminal
 
 
 </details>
@@ -60,7 +68,7 @@
 <details>
 <summary> Open for full Guide </summary>
 
-# Getting Started with Create React App
+## Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
