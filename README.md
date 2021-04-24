@@ -1,5 +1,5 @@
 # <div align="center"> **Tap Room** 🍺  </div>
-### <div align="center"> A front end app tracker for keg alcokhol storage. </div>
+### <div align="center"> A front end app tracker for keg alcohol storage. </div>
 
 
 ### _Contributor(s) and Contact Info_ 
