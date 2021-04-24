@@ -14,10 +14,10 @@ export default class KegList extends Component {
       newKeg: {
         name: "",
         brand: "",
-        price: 0,
-        alcoholContent: 0,
+        price: 1,
+        alcoholContent: 1,
         flavor: "",
-        remainingPints: 0
+        remainingPints: 1
       }
     }
   }
@@ -50,8 +50,18 @@ export default class KegList extends Component {
     let tempKeg = this.state.newKeg;
     tempKeg.name = tempKeg.name.toUpperCase();
 
+    let emptyKeg = {
+      name: "",
+      brand: "",
+      price: 1,
+      alcoholContent: 1,
+      flavor: "",
+      remainingPints: 1
+    }
+
     this.setState(prevState => ({
       kegList: prevState.kegList.concat(tempKeg),
+      newKeg: emptyKeg,
       showKegForm: !prevState.showKegForm
     }));
   };

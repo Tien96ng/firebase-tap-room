@@ -21,7 +21,7 @@ const kegStorage = [
     price: 4,
     alcoholContent: 4,
     flavor: "Caramel",
-    remainingPints: 124
+    remainingPints: 15
   }
 ];
 

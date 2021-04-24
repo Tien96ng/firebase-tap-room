@@ -44,8 +44,8 @@ export default function AddKeg({submit, change, keg}) {
           <Form.Label>Price per Pint (USD)</Form.Label>
           <Form.Control
             type="number"
-            min="0"
-            max="100" 
+            min="1"
+            max="1000" 
             required
             onChange={e => change(e, "price")}
             value={keg.price}
@@ -56,7 +56,7 @@ export default function AddKeg({submit, change, keg}) {
           <Form.Label>Alcohol Content %</Form.Label>
           <Form.Control
             type="number" 
-            min="0" 
+            min="1" 
             max="100" 
             required
             onChange={e => change(e, "alcoholContent")}
@@ -68,7 +68,7 @@ export default function AddKeg({submit, change, keg}) {
           <Form.Label>Total Pints in Keg</Form.Label>
           <Form.Control 
           type="number" 
-          min="0" 
+          min="1" 
           max="124" 
           required 
           onChange={e => change(e, "remainingPints")}
