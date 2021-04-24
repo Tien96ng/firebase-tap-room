@@ -14,6 +14,7 @@
 * **ReactJs**
 * **React Bootstrap**
 * **NPM**
+* **Draw.io**
 
 ---
 
@@ -28,8 +29,11 @@
 <details>
 <summary>Open to view the Diagram</summary>
 
-### Modeled via [Draw.io](https://app.diagrams.net/)
+### **Modeled via [Draw.io](https://app.diagrams.net/)**
 ![](public/img/tap-room.png)
+
+### **Finished MVP**
+![](public/img/tap-rom-demo.gif)
 
 </details>
 
@@ -44,7 +48,7 @@
 ### _Cloning and Initial Setup_
 
 > Repository: 
-1. {}
+1. 
 
 
 </details>
@@ -132,7 +136,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---
 
 ## _Known Bugs_ 🩹
-*{}
+* None at the moment (4/23/2021)
 
 ---
 
