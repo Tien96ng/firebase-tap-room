@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { Form, Button, Col } from 'react-bootstrap';
 
 export default function AddKeg({submit, change, keg}) {
@@ -87,3 +88,9 @@ export default function AddKeg({submit, change, keg}) {
     </Form>
   )
 }
+
+AddKeg.propTypes = {
+  submit: PropTypes.func,
+  change: PropTypes.func,
+  keg: PropTypes.object,
+};
