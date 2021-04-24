@@ -137,7 +137,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ---
 
 ## _Future Updates_ 🛠
-* {}
+* Option to edit a keg's properties after entering them just in case I make a mistake.
+* Delete a keg.
 
 ---
 

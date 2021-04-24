@@ -4,11 +4,20 @@ import { Accordion, Card, Row, Col, Button } from 'react-bootstrap';
 
 export default function Keg({id, kegInfo, eventKey, onClick}) {
 
+  let text = () => {
+    if(kegInfo.remainingPints === 0) {
+      return "Out Of Stock";
+    } else if (kegInfo.remainingPints <= 10) {
+      return "Almost Empty";
+    } else {
+      return "Sell";
+    }
+  }
 
   return (
     <Card id={id} className="accordion">
       <Row className="accordion-header">
-        <Col sm={8}>
+        <Col sm={7}>
           <Accordion.Toggle as={Card.Header} eventKey={eventKey.toString()}>
             {kegInfo.name}
           </Accordion.Toggle>
@@ -20,7 +29,7 @@ export default function Keg({id, kegInfo, eventKey, onClick}) {
             size="sm" className="sell-btn" 
             onClick={onClick} 
             disabled={kegInfo.remainingPints === 0}>
-            {kegInfo.remainingPints === 0 ? "Sold Out" : "Sell"}
+            {text()}
           </Button>
         </Col>
       </Row>
