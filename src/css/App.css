@@ -29,3 +29,10 @@
   background-color: #343A40;
   color: white;
 }
+
+#no-kegs {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  color: red;
+}

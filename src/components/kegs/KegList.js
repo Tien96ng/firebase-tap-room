@@ -80,7 +80,10 @@ export default class KegList extends Component {
           <Button type="button" variant={this.state.showKegForm ? "outline-danger" : "outline-success"} onClick={() => this.handleForm()}> {this.state.showKegForm ? "Close Form" : "Add a Keg"} </Button> 
         </Row>
         
-        <Row>
+        {
+          this.state.kegList.length === 0 ?
+          <h3 id="no-kegs"> No Keg(s) Available </h3> :
+          <Row>
           <Col>
           {
             this.state.showKegForm 
@@ -91,6 +94,7 @@ export default class KegList extends Component {
           }
           </Col>
         </Row>
+        }
       </>
     )
   }
