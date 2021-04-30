@@ -1,7 +1,7 @@
-import kegData from '../../data/kegData';
 import * as keg from "../actions/ActionTypes";
+import * as kegData from "../../../data/kegData";
 
-const state = {
+const kegState = {
   kegList: kegData,
   showKegForm: false,
   newKeg: {
@@ -14,7 +14,7 @@ const state = {
   }
 }
 
-export default function kegListReducer(state = state, action) {
+export default function kegListReducer(state = kegState, action) {
   switch(action.type) {
     case keg.SHOW_KEG_FORM:
       return {
@@ -36,10 +36,10 @@ export default function kegListReducer(state = state, action) {
         newKeg: tempKeg
       }
     case keg.KEG_SUBMISSION:
-      let tempKeg = this.state.newKeg;
-      tempKeg.name = tempKeg.name.toUpperCase();
-      tempKeg.brand = tempKeg.brand.slice(0, 1).toUpperCase() + tempKeg.brand.slice(1).toLowerCase();
-      tempKeg.flavor = tempKeg.flavor.slice(0, 1).toUpperCase() + tempKeg.flavor.slice(1).toLowerCase();
+      let tempNewKeg = this.state.newKeg;
+      tempNewKeg.name = tempNewKeg.name.toUpperCase();
+      tempNewKeg.brand = tempNewKeg.brand.slice(0, 1).toUpperCase() + tempNewKeg.brand.slice(1).toLowerCase();
+      tempNewKeg.flavor = tempNewKeg.flavor.slice(0, 1).toUpperCase() + tempNewKeg.flavor.slice(1).toLowerCase();
       
       let emptyKeg = {
         name: "",
@@ -52,7 +52,7 @@ export default function kegListReducer(state = state, action) {
       
       return {
         ...state,
-        kegList: state.kegList.concat(tempKeg),
+        kegList: state.kegList.concat(tempNewKeg),
         newKeg: emptyKeg,
         showKegForm: !state.showKegForm
       }
