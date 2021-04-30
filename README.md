@@ -1,5 +1,5 @@
-# <div align="center"> **Tap Room** 🍺  </div>
-### <div align="center"> A front end app tracker for keg alcohol storage. </div>
+# <div align="center"> **Redux Tap Room** 🍺  </div>
+### <div align="center"> A front end app tracker for keg alcohol storage using redux. </div>
 
 
 ### _Contributor(s) and Contact Info_ 
@@ -12,6 +12,8 @@
 * **JavaScript**
 * **JSX**
 * **ReactJs**
+* **Redux**
+* **JEST**
 * **React Bootstrap**
 * **NPM**
 * **ESLint**
