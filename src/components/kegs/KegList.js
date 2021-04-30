@@ -52,11 +52,20 @@ function mapStateToProps(state){
   }
 }
 
-const mapDispatchToProps = {
-  handleShowKegForm,
-  handleKegSubmission,
-  handleFormChange, 
-  handleSellKeg
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleShowKegForm: () => {
+      dispatch(handleShowKegForm())
+    },
+    handleKegSubmission: () => {
+      dispatch(handleKegSubmission())
+    },
+    handleFormChange:() => {
+      dispatch(handleFormChange())
+    },
+    handleSellKeg: (id) => {
+      dispatch(handleSellKeg(id))
+    }
+  }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(KegList)

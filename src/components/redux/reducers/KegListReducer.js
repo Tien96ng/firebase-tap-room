@@ -22,9 +22,8 @@ export default function kegListReducer(state = kegState, action) {
         showKegForm: !state.showKegForm
       }
     case keg.HANDLE_SELL_KEG:
-      let tempList = state.kegList;
+      let tempList = [...state.kegList];
       tempList[action.payload].remainingPints -= 1;
-      console.log(tempList[action.payload].remainingPints)
       return {
         ...state,
         kegList: tempList
