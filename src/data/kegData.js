@@ -1,4 +1,4 @@
-const kegStorage = [
+const kegData = [
   {
     name: "MODELO ESPECIAL",
     brand: "Modelo",
@@ -25,4 +25,4 @@ const kegStorage = [
   }
 ];
 
-export default kegStorage;
+export default kegData;
