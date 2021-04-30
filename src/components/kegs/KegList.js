@@ -2,14 +2,12 @@ import React from 'react';
 import { connect } from "react-redux";
 import { 
   handleShowKegForm,
-  handleKegSubmission,
-  handleFormChange, 
   handleSellKeg 
 } from "../redux/actions/ActionTypes";
 import { v4 } from 'uuid';
-import { Accordion, Row, Col, Button } from 'react-bootstrap';
-import Keg from './OLD_Keg';
-import AddKeg from './OLD_AddKeg';
+import { Accordion, Row, Button } from 'react-bootstrap';
+import Keg from './Keg'
+import AddKeg from './AddKeg';
 
 function KegList(props){
   let renderKegs = arr => arr.map((keg, index) => {
@@ -18,7 +16,6 @@ function KegList(props){
 
   return(
     <>
-      {console.log(props)}
       <Row className="justify-content-md-center"> 
         <h1> 
           {props.showKegForm ? "Add a Keg" : "Keg List"} 
@@ -36,7 +33,7 @@ function KegList(props){
       {
         props.showKegForm
         ? 
-        <AddKeg submit={props.KEG_SUBMISSION} change={props.handleFormChange} keg={props.newKeg}/> 
+        <AddKeg keg={props.newKeg}/> 
         : 
         <Accordion> {renderKegs(props.kegList)} </Accordion>
       }
@@ -52,20 +49,9 @@ function mapStateToProps(state){
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleShowKegForm: () => {
-      dispatch(handleShowKegForm())
-    },
-    handleKegSubmission: () => {
-      dispatch(handleKegSubmission())
-    },
-    handleFormChange:() => {
-      dispatch(handleFormChange())
-    },
-    handleSellKeg: (id) => {
-      dispatch(handleSellKeg(id))
-    }
-  }
+const mapDispatchToProps = {
+  handleShowKegForm,
+  handleSellKeg
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(KegList)

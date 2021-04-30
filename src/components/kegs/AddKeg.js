@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { 
+  handleShowKegForm,
+  handleKegSubmission,
+  handleFormChange, 
+  handleSellKeg 
+} from "../redux/actions/ActionTypes";
 import { Form, Button, Col } from 'react-bootstrap';
 
-export default function AddKeg({submit, change, keg}) {
+function AddKeg({keg, handleFormChange, handleKegSubmission}) {
   return(
-    <Form id="keg-form" onSubmit={submit}>
+    <Form id="keg-form" onSubmit={e => handleKegSubmission(e)}>
       <Form.Row>
         <Form.Group as={Col} >
           <Form.Label>Keg name</Form.Label>
@@ -12,7 +19,7 @@ export default function AddKeg({submit, change, keg}) {
             type="text" 
             placeholder="ELYSIAN SPACE DUST IPA" 
             required 
-            onChange={e => change(e, "name")}
+            onChange={e => handleFormChange(e, "name")}
             value={keg.name}
           />
         </Form.Group>
@@ -23,7 +30,7 @@ export default function AddKeg({submit, change, keg}) {
             type="text" 
             placeholder="Elysian" 
             required
-            onChange={e => change(e, "brand")}
+            onChange={e => handleFormChange(e, "brand")}
             value={keg.brand}
           />
         </Form.Group>
@@ -34,7 +41,7 @@ export default function AddKeg({submit, change, keg}) {
             type="text"
             placeholder="Caramel"
             required
-            onChange={e => change(e, "flavor")}
+            onChange={e => handleFormChange(e, "flavor")}
             value={keg.flavor}
           />
         </Form.Group>
@@ -48,7 +55,7 @@ export default function AddKeg({submit, change, keg}) {
             min="1"
             max="1000" 
             required
-            onChange={e => change(e, "price")}
+            onChange={e => handleFormChange(e, "price")}
             value={keg.price}
           />
         </Form.Group>
@@ -60,7 +67,7 @@ export default function AddKeg({submit, change, keg}) {
             min="1" 
             max="100" 
             required
-            onChange={e => change(e, "alcoholContent")}
+            onChange={e => handleFormChange(e, "alcoholContent")}
             value={keg.alcoholContent}
           />
         </Form.Group>
@@ -72,7 +79,7 @@ export default function AddKeg({submit, change, keg}) {
           min="1" 
           max="124" 
           required 
-          onChange={e => change(e, "remainingPints")}
+          onChange={e => handleFormChange(e, "remainingPints")}
           value={keg.remainingPints}
         />
         </Form.Group>
@@ -94,3 +101,16 @@ AddKeg.propTypes = {
   change: PropTypes.func,
   keg: PropTypes.object,
 };
+
+function mapStateToProps(){
+  return {}
+}
+
+const mapDispatchToProps = {
+  handleShowKegForm,
+  handleKegSubmission,
+  handleFormChange, 
+  handleSellKeg
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddKeg)

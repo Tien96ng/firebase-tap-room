@@ -4,8 +4,8 @@ import { SHOW_KEG_FORM, RESET_KEG_FORM, KEG_SUBMISSION, handleFormChange, handle
 import { v4 } from 'uuid';
 import { Accordion, Row, Col, Button } from 'react-bootstrap';
 import kegData from '../../data/kegData';
-import Keg from './OLD_Keg';
-import AddKeg from './OLD_AddKeg';
+import Keg from './Keg';
+import AddKeg from './AddKeg';
 
 // class KegList extends Component {
 //   constructor(props) {
@@ -116,6 +116,23 @@ const mapDispatchToProps = {
   handleKegSubmission,
   handleFormChange, 
   handleSellKeg
+}
+
+const mapDispatchToPropsSecond = (dispatch) => {
+  return {
+    handleShowKegForm: () => {
+      dispatch(handleShowKegForm())
+    },
+    handleKegSubmission: () => {
+      dispatch(handleKegSubmission())
+    },
+    handleFormChange:() => {
+      dispatch(handleFormChange())
+    },
+    handleSellKeg: (id) => {
+      dispatch(handleSellKeg(id))
+    }
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(KegList)
