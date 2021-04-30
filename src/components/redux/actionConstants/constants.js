@@ -1,0 +1,5 @@
+export const SHOW_KEG_FORM = "SHOW_KEG_FORM"; // done
+export const RESET_KEG_FORM = "RESET_KEG_FORM";
+export const KEG_SUBMISSION = "KEG_SUBMISSION";
+export const HANDLE_FORM_CHANGE = "HANDLE_FORM_CHANGE";
+export const HANDLE_SELL_KEG = "HANDLE_SELL_KEG";

@@ -112,9 +112,8 @@ function mapStateToProps(state){
 }
 
 const mapDispatchToProps = {
-  SHOW_KEG_FORM, 
-  RESET_KEG_FORM, 
-  KEG_SUBMISSION, 
+  handleShowKegForm,
+  handleKegSubmission,
   handleFormChange, 
   handleSellKeg
 }

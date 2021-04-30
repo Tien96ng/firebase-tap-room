@@ -1,8 +1,8 @@
-import * as keg from "../actions/ActionTypes";
+import * as keg from "../actionConstants/constants"
 import * as kegData from "../../../data/kegData";
 
 const kegState = {
-  kegList: kegData,
+  kegList: kegData.default,
   showKegForm: false,
   newKeg: {
     name: "",
@@ -21,14 +21,15 @@ export default function kegListReducer(state = kegState, action) {
         ...state,
         showKegForm: !state.showKegForm
       }
-    case keg.handleSellKeg:
+    case keg.HANDLE_SELL_KEG:
       let tempList = state.kegList;
       tempList[action.payload].remainingPints -= 1;
+      console.log(tempList[action.payload].remainingPints)
       return {
         ...state,
         kegList: tempList
       }
-    case keg.handleFormChange: 
+    case keg.HANDLE_FORM_CHANGE: 
       let tempKeg = state.newKeg;
       tempKeg[action.payload] = action.e.target.value;
       return {
