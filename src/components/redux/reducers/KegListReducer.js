@@ -31,10 +31,6 @@ export default function kegListReducer(state = kegState, action) {
     case keg.HANDLE_FORM_CHANGE: 
       let tempKeg = {...state.newKeg};
       tempKeg[action.payload] = action.value;
-      console.log(tempKeg);
-      console.log(action.payload)
-      console.log(tempKeg[action.payload]);
-      console.log(action.value)
       return {
         ...state,
         newKeg: tempKeg
