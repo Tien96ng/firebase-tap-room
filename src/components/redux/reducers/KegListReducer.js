@@ -36,11 +36,7 @@ export default function kegListReducer(state = kegState, action) {
         newKeg: tempKeg
       }
     case keg.KEG_SUBMISSION:
-      action.payload.preventDefault();
       let tempNewKeg = {...state.newKeg};
-      tempNewKeg.name = tempNewKeg.name.toUpperCase();
-      tempNewKeg.brand = tempNewKeg.brand.slice(0, 1).toUpperCase() + tempNewKeg.brand.slice(1).toLowerCase();
-      tempNewKeg.flavor = tempNewKeg.flavor.slice(0, 1).toUpperCase() + tempNewKeg.flavor.slice(1).toLowerCase();
       
       let emptyKeg = {
         name: "",
@@ -53,7 +49,7 @@ export default function kegListReducer(state = kegState, action) {
       
       return {
         ...state,
-        kegList: state.kegList.concat(tempNewKeg),
+        kegList: [...state.kegList, tempNewKeg],
         newKeg: emptyKeg,
         showKegForm: !state.showKegForm
       }

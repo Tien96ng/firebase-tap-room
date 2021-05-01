@@ -20,7 +20,7 @@ function AddKeg({keg, handleFormChange, handleKegSubmission}) {
             placeholder="ELYSIAN SPACE DUST IPA" 
             required 
             onChange={e => handleFormChange(e, "name")}
-            value={keg.name}
+            value={keg.name.toUpperCase()}
           />
         </Form.Group>
 
@@ -31,7 +31,7 @@ function AddKeg({keg, handleFormChange, handleKegSubmission}) {
             placeholder="Elysian" 
             required
             onChange={e => handleFormChange(e, "brand")}
-            value={keg.brand}
+            value={keg.brand.slice(0, 1).toUpperCase() + keg.brand.slice(1).toLowerCase()}
           />
         </Form.Group>
 
@@ -42,7 +42,7 @@ function AddKeg({keg, handleFormChange, handleKegSubmission}) {
             placeholder="Caramel"
             required
             onChange={e => handleFormChange(e, "flavor")}
-            value={keg.flavor}
+            value={keg.flavor.slice(0, 1).toUpperCase() + keg.flavor.slice(1).toLowerCase()}
           />
         </Form.Group>
       </Form.Row>
