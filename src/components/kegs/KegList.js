@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { 
   handleShowKegForm,
   handleSellKeg 
-} from "../redux/actions/ActionTypes";
+} from "../redux/actions/actions";
 import { v4 } from 'uuid';
 import { Accordion, Row, Button } from 'react-bootstrap';
 import Keg from './Keg'

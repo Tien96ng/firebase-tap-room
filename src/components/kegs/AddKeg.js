@@ -6,7 +6,7 @@ import {
   handleKegSubmission,
   handleFormChange, 
   handleSellKeg 
-} from "../redux/actions/ActionTypes";
+} from "../redux/actions/actions";
 import { Form, Button, Col } from 'react-bootstrap';
 
 function AddKeg({keg, handleFormChange, handleKegSubmission}) {
