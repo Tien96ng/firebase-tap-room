@@ -37,18 +37,11 @@ describe("Tap room actions", () => {
     });
   });
 
-  // it("handleFormChange should create HANDLE_FORM_CHANGE action", () => {
-  //   expect(action.handleFormChange({target: value}, "name")).toEqual({
-  //     type: constant.HANDLE_FORM_CHANGE,
-  //     value: e.target.value,
-  //     payload: "name"
-  //   });
-  // });
-
-  // it("[] should create [] action", () => {
-  //   expect(action.handleKegSubmission("bob")).toEqual({
-  //     type: constant.KEG_SUBMISSION,
-  //     payload: "bob"
-  //   });
-  // });
+  it("handleFormChange should create HANDLE_FORM_CHANGE action", () => {
+    expect(action.handleFormChange({target: "e"}, "name")).toEqual({
+      type: constant.HANDLE_FORM_CHANGE,
+      value: undefined,
+      payload: "name"
+    });
+  });
 })
